@@ -177,6 +177,85 @@ body {
 .page.active {
   display: block;
 }
+
+/*===================== TABLE ===========================*/
+.modal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.modal-content th, 
+.modal-content td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.modal-content th {
+  background-color: #333;
+  color: white;
+}
+
+/* Modal background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7); /* darker background */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #1a1a1a; /* dark background to match your theme */
+  color: white;
+  margin: 50px auto; /* centered vertically */
+  padding: 30px; /* more space inside */
+  border-radius: 15px;
+  width: 90%; /* wider */
+  max-width: 1000px; /* max width so it doesn’t overflow large screens */
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  overflow-x: auto; /* horizontal scroll if table too wide */
+}
+
+/* Close button */
+.modal-content .close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Table inside modal */
+.modal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.modal-content th, 
+.modal-content td {
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.modal-content th {
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+}
+
+.modal-content td {
+  font-size: 14px;
+}
+
 </style>
 </head>
 
@@ -205,7 +284,7 @@ body {
     <!-- CARD 1 -->
     <div class="card" onclick="openModal('about 1')">
       <img src="Aqlan.jpeg">
-      <h3>Muhamad Aqlan Zhafran Bin </h3>
+      <h3>Muhamad Aqlan Zhafran Bin Nor Azli</h3>
     </div>
   
     <!-- CARD 2 -->
@@ -234,7 +313,7 @@ body {
   
   	<!-- CARD 6 -->
     <div class="card" onclick="openModal('about 6')">
-      <img src="NAJIHAH.jpg">
+      <img src="najihah.jpeg">
       <h3>Sharifah Najihah Nazaruddin</h3>
     </div>
 	
@@ -248,14 +327,10 @@ body {
 
     <img src="Aqlan.jpeg">
 
-    <h2>Muhamad Aqlan Zhafran Bin</h2>
+    <h2>Muhamad Aqlan Zhafran Bin Nor Azli </h2>
 
     <ul>
-      <li><b>Matric Number: </b> 22006502</li>
-      <li><b>Contribution:</b></li>
-      <ol>
-        <li>She baru balik Umrah</li>
-      </ol>
+      <li><b>Matric Number: </b> 22003416 </li>
     </ul>
   </div>
 </div>
@@ -267,16 +342,10 @@ body {
 
     <img src="Khaula_'Adawiyah.jpg">
 
-    <h2>Khaula 'Adawiyah</h2>
+    <h2>Khaula 'Adawiyah Binti Amran</h2>
 
     <ul>
       <li><b>Matric Number: </b> 22006502</li>
-      <li><b>Contribution:</b></li>
-      <ol>
-        <li>She cantik and baik</li>
-        <li>She rajin and rajin</li>
-		<li>She organized person</li>
-      </ol>
     </ul>
   </div>
 </div>
@@ -288,15 +357,10 @@ body {
 
     <img src="mira.jpg">
 
-    <h2>Nurul Amirah</h2>
+    <h2>Nurul Amirah Binti Ghazali</h2>
 
     <ul>
       <li><b>Matric Number:</b> 22003489</li>
-      <li><b>Contribution:</b></li>
-      <ol>
-        <li>She's cute !</li>
-        <li>heheheheh</li>
-      </ol>
     </ul>
   </div>
 </div>
@@ -311,12 +375,7 @@ body {
     <h2>Wong Yee Shuen</h2>
 
     <ul>
-      <li><b>Matric Number:</b> </li>
-      <li><b>Contribution:</b></li>
-      <ol>
-        <li>She's cool!</li>
-        <li>huaahahaha</li>
-      </ol>
+      <li><b>Matric Number:</b> 22003493 </li>
     </ul>
   </div>
 </div>
@@ -332,12 +391,6 @@ body {
 
     <ul>
       <li><b>Matric Number:</b> 22003546</li>
-      <li><b>Contribution:</b></li>
-      <ol>
-        <li>She loveeeessss cats !</li>
-		<li>Rasa cam nk lempang</li>
-        <li>meowwwww</li>
-      </ol>
     </ul>
   </div>
 </div>
@@ -348,17 +401,12 @@ body {
   <div class="modal-content">
     <span class="close" onclick="closeModal('about 6')">&times;</span>
 
-    <img src="Najihah.jpg">
+    <img src="najihah.jpeg">
 
-    <h2>Sharifah Najihah Nazaruddin</h2>
+    <h2>Sharifah Najihah Binti Syed Nazaruddin</h2>
 
     <ul>
-      <li><b>Matric Number:</b> 2200</li>
-      <li><b>Contribution:</b></li>
-      <ol>
-        <li>She's mcm omputih !</li>
-        <li>heheheheh</li>
-      </ol>
+      <li><b>Matric Number:</b>  22003362 </li>
     </ul>
   </div>
 </div>
@@ -721,7 +769,7 @@ body {
 <section id="lab2" class="section page">
 <button onclick="showPage('home')" class="back-btn">⬅ Back to Home</button>
 
-  <h2>Lab Session 2 – Mushroon Products</h2>
+  <h2>Lab Session 2 – Types of Ferns</h2>
 
   <div class="card-grid">
 
@@ -1345,6 +1393,1644 @@ body {
   </div>
 </div>
 
+<!-- ===================== FIELDWORK ===================== -->
+<section id="Fieldwork" class="section page">
+  <button onclick="showPage('home')" class="back-btn">⬅ Back to Home</button>
+
+  <h2>Fieldwork: Lenggeng, Negeri Sembilan</h2>
+
+<!-- 🎥 Fieldwork Video -->
+<div style="text-align:center; margin: 20px 0;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-vr7zqlbce8?si=BhUejJ8dOpacihEL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+
+  <div class="card-grid">
+
+    <!-- 20 house cards -->
+    <div class="card" onclick="openModal('house1')"><h3>House 1</h3></div>
+    <div class="card" onclick="openModal('house2')"><h3>House 2</h3></div>
+    <div class="card" onclick="openModal('house3')"><h3>House 3</h3></div>
+    <div class="card" onclick="openModal('house4')"><h3>House 4</h3></div>
+    <div class="card" onclick="openModal('house5')"><h3>House 5</h3></div>
+    <div class="card" onclick="openModal('house6')"><h3>House 6</h3></div>
+    <div class="card" onclick="openModal('house7')"><h3>House 7</h3></div>
+    <div class="card" onclick="openModal('house8')"><h3>House 8</h3></div>
+    <div class="card" onclick="openModal('house9')"><h3>House 9</h3></div>
+    <div class="card" onclick="openModal('house10')"><h3>House 10</h3></div>
+    <div class="card" onclick="openModal('house11')"><h3>House 11</h3></div>
+    <div class="card" onclick="openModal('house12-16')"><h3>House 12-16</h3></div>
+    <div class="card" onclick="openModal('house17')"><h3>House 17</h3></div>
+    <div class="card" onclick="openModal('house18')"><h3>House 18</h3></div>
+    <div class="card" onclick="openModal('house19')"><h3>House 19</h3></div>
+    <div class="card" onclick="openModal('house20')"><h3>House 20</h3></div>
+
+  </div>
+</section>
+
+<!-- ===================== HOUSE 1 MODAL ===================== -->
+<div class="modal" id="house1">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('house1')">&times;</span>
+
+    <h2>House 1</h2>
+
+    <table>
+      <tr>
+        <th>Common Name</th>
+        <th>Scientific Name</th>
+        <th>No. of replicates</th>
+      </tr>
+      <tr>
+        <td>Keladi Hutan</td>
+        <td><i>Alocasia macrorrhizos</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Bunga Kertas</td>
+        <td><i>Bougainvillea spp.</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Keladi Merah</td>
+        <td><i>Colocasia esculenta (red-petiole cultivar)</i></td>
+        <td>1</td>
+      </tr>
+	  <tr>
+        <td>Lidah Buaya</td>
+        <td><i>Aloe vera</i></td>
+        <td>2</td>
+      </tr>
+	  <tr>
+        <td>Pokok Jejarum</td>
+        <td><i>Ixora coccinea</i></td>
+        <td>1</td>
+      </tr>
+	  <tr>
+        <td>Pokok Bogak</td>
+        <td><i>Cycas clivicola K.D. Hil</i></td>
+        <td>1</td>
+      </tr>
+	  <tr>
+        <td>Pokok Ubi Ajinomoto</td>
+        <td><i>Manihot esculenta (industrial cultivar)</i></td>
+        <td>1</td>
+      </tr>
+	  <tr>
+        <td>Pokok Ubi Kayu Pulut</td>
+        <td><i>Manihot esculenta (waxy cultivar)</i></td>
+        <td>1</td>
+      </tr>
+	  <tr>
+        <td>Pokok Jambu Merah</td>
+        <td><i>Psidium guajava</i></td>
+        <td>2</td>
+      </tr>
+	  <tr>
+        <td>Pokok Kelapa</td>
+        <td><i>Cocos nucifera</i></td>
+        <td>2</td>
+      </tr>
+	  <tr>
+        <td>Pokok Serai</td>
+        <td><i>Cymbopogon citratus</i></td>
+        <td>2</td>
+      </tr>
+	  <tr>
+        <td>Pokok Kunyit</td>
+        <td><i>Curcuma longa</i></td>
+        <td>2</td>
+      </tr>
+	  <tr>
+        <td>Pokok Keladi</td>
+        <td><i>Colocasia esculenta</i></td>
+        <td>2</td>
+      </tr>
+	  <tr>
+        <td>Pokok Manggis</td>
+        <td><i>Garcinia mangostana</i></td>
+        <td>1</td>
+      </tr>
+	  <tr>
+        <td>Pokok Durian</td>
+        <td><i>Durio zibethinus</i></td>
+        <td>1</td>
+      </tr>
+	  <tr>
+        <td>Pokok Rambutan</td>
+        <td><i>Nephelium lappaceum</i></td>
+        <td>2</td>
+      </tr>
+	  <tr>
+        <td>Pokok Kantan</td>
+        <td><i>Etlingera elatior</i></td>
+        <td>2</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- House 2 -->
+<div class="modal" id="house2">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('house2')">&times;</span>
+
+    <h2>House 2</h2>
+
+    <table>
+      <tr>
+        <th>Common Name</th>
+        <th>Scientific Name</th>
+        <th>No. of replicates</th>
+      </tr>
+      <tr>
+        <td>Limau Nipis</td>
+        <td></i>Citrus aurantiifolia</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Limau Kasturi Batik</td>
+        <td><i>Citrus microcarpa (var. Batik)</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Nanas Batu</td>
+        <td><i>Ananas comosus</i></td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Mangga Telur</td>
+        <td><i>Mangifera indica (egg-shaped cultivar)</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Ubi Kerinting</td>
+        <td><i>Manihot esculenta</i></td>
+        <td>1</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- House 3 -->
+<div class="modal" id="house3">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('house3')">&times;</span>
+
+    <h2>House 3</h2>
+
+    <table>
+      <tr>
+        <th>Common Name</th>
+        <th>Scientific Name</th>
+        <th>No. of replicates</th>
+      </tr>
+      <tr>
+        <td>Pokok Pisang</td>
+        <td><i>Musa sp.</i></td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Pokok Pinang Merah</td>
+        <td><i>Cyrtostachys renda</i></td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Pokok Bunga Kertas</td>
+        <td><i>Bougainvillea sp.</i></td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Pokok Rambutan</td>
+        <td><i>Nephelium lappaceum</i></td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Pokok Serai</td>
+        <td><i>Cymbopogon sp.</i></td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Pokok Jejarum Putih</td>
+        <td><i>Ixora accuminata Roxb.</i></td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Mango</td>
+        <td><i>2</i></td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Papaya</td>
+        <td><i>4</i></td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Guava</td>
+        <td><i>3</i></td>
+        <td>4</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- House 4 -->
+<div class="modal" id="house4">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('house4')">&times;</span>
+
+    <h2>House 4</h2>
+
+    <table>
+      <tr>
+        <th>Common Name</th>
+        <th>Scientific Name</th>
+        <th>No. of replicates</th>
+      </tr>
+      <tr>
+        <td>Pokok Bunga Raya</td>
+        <td><i>Hibiscus rosa-sinensis</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Bunga Akar Kuning</td>
+        <td><i>Allamanda cathartica</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Pecah Periuk</td>
+        <td><i>Ixora</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Jambu</td>
+        <td><i>Psidium guajava</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Serai</td>
+        <td><i>Cymbopogon</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok cili padi</td>
+        <td><i>Siling labuyo</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok roselle(asam belanda)</td>
+        <td><i>Hibiscus sabdariffa</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok pisang</td>
+        <td><i>Musa sp.</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Lidah Buaya</td>
+        <td><i>Aloe vera</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok misai kucing</td>
+        <td><i>Orthosiphon aristatus</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Terung Pipit</td>
+        <td><i>Solanum torvum</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Rambutan</td>
+        <td><i>Nephelium lappaceum</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Durian Belanda</td>
+        <td><i>Annona muricata</i></td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Pokok Nenas</td>
+        <td><i>Ananas comosus</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Orkid hiasan</td>
+        <td><i>Orchidaceae</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Ulam Raja</td>
+        <td><i><i>Cosmos caudatus</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Cili Burung</td>
+        <td><i>Capsicum frutescens</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Inai</td>
+        <td><i>Lawsonia inermis</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Kucai</td>
+        <td><i>Allium tuberosum</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Labu</td>
+        <td><i>Cucurbita spp.</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Terung Telunjuk</td>
+        <td><i>Solanum aethiopicum</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Andung</td>
+        <td><i>Monopetalanthus coriaceus</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Petai</td>
+        <td><i>Parkia speciosa</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Kantan</td>
+        <td><i>Etlingera elatior</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Betik</td>
+        <td><i>Carica papaya</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Pandan</td>
+        <td><i>Pandanus amaryllifolius</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Pulasan</td>
+        <td><i>Nephelium ramboutan-ake</i></td>
+        <td>1</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- House 5 -->
+<div class="modal" id="house5">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('house5')">&times;</span>
+
+    <h2>House 5</h2>
+
+    <table>
+      <tr>
+        <th>Common Name</th>
+        <th>Scientific Name</th>
+        <th>No. of replicates</th>
+      </tr>
+      <tr>
+        <td>Buah kedongong/amrah </td>
+        <td><i>Spondias dulcis</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Serai</td>
+        <td><i>Cymbopogon sp.</i></td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>Nanas</td>
+        <td><i>Ananas sp.</i></td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>Pucuk Ubi Ajinomoto</td>
+        <td><i>Cnidoscolus aconitifolius</i></td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Terung pipit</td>
+        <td><i>Solanum torvum</i></td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Pokok Puding</td>
+        <td><i>Codiaeum variegatum</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pucuk Ubi Ekor Kucing</td>
+        <td><i>Acalypha hispida</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Lidah Buaya</td>
+        <td><i>Aloe vera</i></td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Durian Belanda</td>
+        <td><i>Annona muricata</i></td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Pokok Kelapa</td>
+        <td><i>Cocos nucifera</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Betik</td>
+        <td><i>Carica papaya</i></td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Pokok Rambutan</td>
+        <td><i>Nephelium lappaceum</i></td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Pokok Kantan</td>
+        <td><i>Etlingera elatior</i></td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Pokok Ubi Keledek</td>
+        <td><i>Ipomoea batatas</i></td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Siam Aurora</td>
+        <td><i>Aglaonema sp.</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Naga</td>
+        <td><i>Hylocereus sp.</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Bunga Raya</td>
+        <td><i>Hibiscus rosa-sinensis</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Kaduk</td>
+        <td><i>Piper sarmentosum</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Kari</td>
+        <td><i>Murraya koenigii</i></td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Limau purut</td>
+        <td><i>Citrus hystrix</i></td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Pokok Durian</td>
+        <td><i>Durio sp.</i></td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Pokok Kunyit</td>
+        <td><i>Curcuma domestica</i></td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Pokok Cili Burung</td>
+        <td><i>Capsicum frutescens</i></td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Limau Kasturi</td>
+        <td><i>Citrus mitis</i></td>
+        <td>2</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- House 6 -->
+<div class="modal" id="house6">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('house6')">&times;</span>
+
+    <h2>House 6</h2>
+
+    <table>
+      <tr>
+        <th>Common Name</th>
+        <th>Scientific Name</th>
+        <th>No. of replicates</th>
+      </tr>
+      <tr>
+        <td>Pokok Rambutan</td>
+        <td><i>Nephelium lappaceum</i></td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Limau Kasturi</td>
+        <td><i>Citrus mitis</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Belimbing Buluh</td>
+        <td><i>Averrhoa bilimbi</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Serai</td>
+        <td><i>Cymbopogon sp.</i></td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Pokok Buah Mata Kucing</td>
+        <td><i>Dimocarpus longan</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Pinang Merah</td>
+        <td><i>Cyrtostachys renda</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Pandan</td>
+        <td><i>Pandanus amaryllifolius</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Betik</td>
+        <td><i>Carica papaya</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Kelapa</td>
+        <td><i>Cocos nucifera</i></td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Pokok Pisang</td>
+        <td><i>Musa sp.</i></td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>Pokok Durian</td>
+        <td><i>Durio sp.</i></td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Pokok Melur</td>
+        <td><i>Jasminum sambac</i></td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Pokok Nangka</td>
+        <td><i>Artocarpus heterophyllus</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Mempelam Chockanan</td>
+        <td><i>Mangifera indica L.</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Limau Nipis</td>
+        <td><i>Citrus aurantifolia</i></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Pokok Jambu Air</td>
+        <td><i>Syzygium aqueum</i></td>
+        <td>1</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- House 7 -->
+<div class="modal" id="house7">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('house7')">&times;</span>
+
+    <h2>House 7</h2>
+
+    <table>
+      <tr>
+        <th>Common Name</th>
+        <th>Scientific Name</th>
+        <th>No. of replicates</th>
+      </tr>
+      <tr>
+        <td>Pokok Rambutan</td>
+        <td><i>Nephelium lappaceum</i></td>
+        <td>1</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- House 8 -->
+<div class="modal" id="house8">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('house8')">&times;</span>
+
+    <h2>House 8</h2>
+
+<table>
+  <tr>
+    <th>Common Name</th>
+    <th>Scientific Name</th>
+    <th>No. of replicates</th>
+  </tr>
+
+  <tr>
+    <td>Gold Dust Dracaena</td>
+    <td><i>Dracaena fragrans</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Pokok Mahkota Puteri</td>
+    <td><i>Euphorbia geroldii</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Pokok Zebra Amazon</td>
+    <td><i>Aechmea chantinii</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Pokok Bunga Kertas</td>
+    <td><i>Bougainvillea spp.</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Pokok Lidah Mertua</td>
+    <td><i>Dracaena trifasciata</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Kaktus</td>
+    <td><i>Acanthocereus tetragonus</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Mahkota Duri</td>
+    <td><i>Euphorbia milii</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Pokok Tapak Dara</td>
+    <td><i>Catharanthus roseus</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Pokok Kemboja</td>
+    <td><i>Plumeria</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Orkid Harimau</td>
+    <td><i>Grammatophyllum speciosum</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Pokok Rambutan</td>
+    <td><i>Nephelium lappaceum</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Pokok Monstera</td>
+    <td><i>Monstera deliciosa</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Orkid Tanah</td>
+    <td><i>Cymbidium spp.</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Lidah Buaya</td>
+    <td><i>Aloe vera</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Dracaena Lime Light</td>
+    <td><i>Dracaena fragrans</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Seri Rezeki</td>
+    <td><i>Aglaonema spp.</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Keladi Kemoyang</td>
+    <td><i>Homalomena rostrata</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Croton</td>
+    <td><i>Codiaeum variegatum</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Bunga Cenderawasih</td>
+    <td><i>Strelitzia spp.</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Anthurium Sarang Burung</td>
+    <td><i>Anthurium hookeri</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Papyrus / Umbrella Sedge</td>
+    <td><i>Cyperus alternifolius</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Periwinkle / Tapak Dara</td>
+    <td><i>Catharanthus roseus</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Pokok Langsuyar</td>
+    <td><i>Asplenium nidus</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Candelabra Tree</td>
+    <td><i>Euphorbia ingens</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Cornstalk Dracaena</td>
+    <td><i>Dracaena fragrans</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Tricolor Pedilanthus</td>
+    <td><i>Pedilanthus tithymaloides</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Pokok Kemboja Jepun</td>
+    <td><i>Adenium obesum</i></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Keladi</td>
+    <td><i>Caladium spp.</i></td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>Anggerik Sultan</td>
+    <td><i>Dendrobium mantangai</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Pokok Durian</td>
+    <td><i>Durio zibethinus L.</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Pokok Manggis</td>
+    <td><i>Garcinia mangostana</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Areca Palm</td>
+    <td><i>Dypsis lutescens</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Pokok Pisang Tanah</td>
+    <td><i>Dieffenbachia seguine</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Pinang Kuning</td>
+    <td><i>Dypsis lutescens</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Fish Tail Palm</td>
+    <td><i>Caryota mitis</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Swiss Cheese Vine</td>
+    <td><i>Monstera acacoyaguensis</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Pokok Siam Merah</td>
+    <td><i>Aglaonema commutatum</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Kemboja Bunga Putih</td>
+    <td><i>Plumeria pudica</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Pokok Besi</td>
+    <td><i>Dracaena aletriformis</i></td>
+    <td>1</td>
+  </tr>		 
+    </table>
+  </div>
+</div>
+
+<!-- House 9 -->
+<div class="modal" id="house9">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('house9')">&times;</span>
+
+    <h2>House 9</h2>
+
+<table>
+  <tr>
+    <th>Common Name</th>
+    <th>Scientific Name</th>
+    <th>No. of replicates</th>
+  </tr>
+
+  <tr>
+    <td>Paku Pakis Tanduk Rusa</td>
+    <td><i>Platycerium</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Mahkota Duri</td>
+    <td><i>Euphorbia milii</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Baby Rubber Plant</td>
+    <td><i>Peperomia obtusifolia</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Pokok Bunga Sepulih</td>
+    <td><i>Proiphys amboinensis</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Keladi Urat Putih</td>
+    <td><i>Caladium lindenii</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Keladi Merah Jambu</td>
+    <td><i>Caladium bicolor</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Pigeon Orchid</td>
+    <td><i>Dendrobium spp.</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Pokok Puding Putih</td>
+    <td><i>Codiaeum variegatum</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Orkid Menari</td>
+    <td><i>Oncidium sphacelatum</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Aglaonema Siam Merah</td>
+    <td><i>Aglaonema commutatum</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Anggerik Ungu</td>
+    <td><i>Dendrobium spp. / D. bigibbum</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Chinese Evergreen 'Maria'</td>
+    <td><i>Aglaonema Maria</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Paku Rambut Dara</td>
+    <td><i>Adiantum spp.</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Setawar Putih</td>
+    <td><i>Costus speciosus</i></td>
+    <td>1</td>
+  </tr>
+</table>
+  </div>
+</div>
+
+<!-- House 10 -->
+<div class="modal" id="house10">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('house10')">&times;</span>
+
+    <h2>House 10</h2>
+
+<table>
+  <tr>
+    <th>Common Name</th>
+    <th>Scientific Name</th>
+    <th>No. of replicates</th>
+  </tr>
+
+  <tr>
+    <td>Pokok Rambutan</td>
+    <td><i>Nephelium lappaceum</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Lobster-claws / Toucan Beak / False Bird-of-Paradise</td>
+    <td><i>Heliconia psittacorum (Yellow Heliconia)</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Papaya</td>
+    <td><i>Carica papaya</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Long Strap Fern</td>
+    <td><i>Campyloneurum phyllitidis</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Cananga Tree</td>
+    <td><i>Cananga odorata</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Bird Nest Fern</td>
+    <td><i>Asplenium nidus</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Serai</td>
+    <td><i>Cymbopogon citratus</i></td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>Daun Puding Hitam</td>
+    <td><i>Graptophyllum pictum</i></td>
+    <td>5</td>
+  </tr>
+
+</table>	
+  </div>
+</div>
+
+<!-- House 11 -->
+<div class="modal" id="house11">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('house11')">&times;</span>
+
+    <h2>House 11</h2>
+
+<table>
+  <tr>
+    <th>Common Name</th>
+    <th>Scientific Name</th>
+    <th>No. of replicates</th>
+  </tr>
+
+  <tr>
+    <td>Snake Plant</td>
+    <td><i>Dracaena trifasciata</i></td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>Purple Shamrock</td>
+    <td><i>Oxalis violacea</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Cardwell Lily</td>
+    <td><i>Proiphys amboinensis (L.) Herb</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Wild Petunias</td>
+    <td><i>Ruellia</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Coconut Tree</td>
+    <td><i>Cocos nucifera</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Rambutan</td>
+    <td><i>Nephelium lappaceum</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Lidah Buaya</td>
+    <td><i>Aloe vera</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Pandan Plant</td>
+    <td><i>Pandanus amaryllifolius</i></td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Peacock Plant</td>
+    <td><i>Calathea orbifolia</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Minnieroot</td>
+    <td><i>Ruellia tuberosa</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Belimbing Buluh</td>
+    <td><i>Averrhoa bilimbi</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Kasai Daun Besar</td>
+    <td><i>Pometia pinnata</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Pokok Ubi Jurai</td>
+    <td><i>Manihot esculenta</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Areca Plant</td>
+    <td><i>Dypsis lutescens</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Prickly Pear Cactus</td>
+    <td><i>Opuntia ficus-indica</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Pokok Pecah Periuk</td>
+    <td><i>Ixora</i></td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>Golden Trumpet</td>
+    <td><i>Allamanda cathartica</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Serai</td>
+    <td><i>Cymbopogon citratus</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Banana</td>
+    <td><i>Musa</i></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Sugarcane Plant</td>
+    <td><i>Saccharum officinarum</i></td>
+    <td>4</td>
+  </tr>
+
+</table>
+  </div>
+</div>
+
+<!-- House 12 - 16 -->
+<div class="modal" id="house12 - 16">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('house12 - 16')">&times;</span>
+
+    <h2>House 12 - 16</h2>
+
+    <table>
+      <tr>
+        <th>Common Name</th>
+        <th>Scientific Name</th>
+        <th>No. of replicates</th>
+      </tr>
+      <tr>
+        <td>Mango</td>
+        <td>2</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Papaya</td>
+        <td>4</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Guava</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- House 17 -->
+<div class="modal" id="house17">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('house17')">&times;</span>
+
+    <h2>House 17</h2>
+
+<table>
+  <tr>
+    <th>Common Name</th>
+    <th>Scientific Name</th>
+    <th>No. of replicates</th>
+  </tr>
+
+  <tr>
+    <td>Pokok Pecah Periuk</td>
+    <td><i>Ixora coccinea</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Cup of Gold Vine</td>
+    <td><i>Solandra</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Pokok Ubi Kayu</td>
+    <td><i>Manihot esculenta</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Tiger Orchid</td>
+    <td><i>Grammatophyllum speciosum</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Banana</td>
+    <td><i>Musa sp.</i></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Bunga Raya</td>
+    <td><i>Hibiscus rosa-sinensis</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Double-Flowered Crepe Jasmine</td>
+    <td><i>Tabernaemontana divaricata ‘Flore Pleno’</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Vanda Orchid</td>
+    <td><i>Vanda</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Galanga Plant</td>
+    <td><i>Alpinia galanga</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Four O'Clock Flower</td>
+    <td><i>Mirabilis jalapa</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Lidah Buaya</td>
+    <td><i>Aloe vera</i></td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Gurjan</td>
+    <td><i>Dipterocarpus turbinatus</i></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Bitter Ginger</td>
+    <td><i>Zingiber zerumbet</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Trumpet Orchid</td>
+    <td><i>Schomburgkia tibicinis</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Spider Plant</td>
+    <td><i>Chlorophytum comosum</i></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Elephant Ear Plant</td>
+    <td><i>Colocasia</i></td>
+    <td>4</td>
+  </tr>
+  </table>
+  </div>
+</div>
+
+<!-- House 18 -->
+<div class="modal" id="house18">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('house18')">&times;</span>
+
+    <h2>House 18</h2>
+
+<table>
+  <tr>
+    <th>Common Name</th>
+    <th>Scientific Name</th>
+    <th>No. of replicates</th>
+  </tr>
+
+  <tr>
+    <td>Coconut Tree</td>
+    <td><i>Cocos nucifera</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Serai</td>
+    <td><i>Cymbopogon citratus</i></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Banana</td>
+    <td><i>Musa spp.</i></td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Durian Tree</td>
+    <td><i>Durio zibethinus</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Mango Tree</td>
+    <td><i>Mangifera indica</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Pineapple Plant</td>
+    <td><i>Ananas comosus</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Pokok Limau</td>
+    <td><i>Citrus spp.</i></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Arrowroot Plant</td>
+    <td><i>Maranta arundinacea</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Greater Galangal</td>
+    <td><i>Alpinia galanga</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Jackfruit</td>
+    <td><i>Artocarpus heterophyllus</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Pandan</td>
+    <td><i>Pandanus amaryllifolius</i></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Gold Dust Dracaena</td>
+    <td><i>Dracaena surculosa</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Lidah Buaya</td>
+    <td><i>Aloe vera</i></td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Snake Plant</td>
+    <td><i>Dracaena trifasciata</i></td>
+    <td>4</td>
+  </tr>
+</table>
+  </div>
+</div>
+
+<!-- House 19 -->
+<div class="modal" id="house19">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('house19')">&times;</span>
+
+    <h2>House 19</h2>
+
+<table>
+  <tr>
+    <th>Common Name</th>
+    <th>Scientific Name</th>
+    <th>No. of replicates</th>
+  </tr>
+
+  <tr>
+    <td>Rambutan</td>
+    <td><i>Nephelium lappaceum</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Coconut</td>
+    <td><i>Cocos nucifera</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Pokok Pisang</td>
+    <td><i>Musa spp.</i></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Bilimbi Tree</td>
+    <td><i>Averrhoa bilimbi</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Durian Tree</td>
+    <td><i>Durio zibethinus</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Serai</td>
+    <td><i>Cymbopogon citratus</i></td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Starfruit Tree</td>
+    <td><i>Averrhoa carambola</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Giant Crinum Lily</td>
+    <td><i>Crinum asiaticum</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Pokok Ubi</td>
+    <td><i>Manihot esculenta</i></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Betel Pepper</td>
+    <td><i>Piper betle</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Mango Tree</td>
+    <td><i>Mangifera indica</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Curry Tree</td>
+    <td><i>Murraya koenigii</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Jasmine Tree</td>
+    <td><i>Jasminum spp.</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Mangosteen Tree</td>
+    <td><i>Garcinia mangostana</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Butterfly Pea Flower</td>
+    <td><i>Clitoria ternatea</i></td>
+    <td>6</td>
+  </tr>
+
+</table>
+  </div>
+</div>
+
+<!-- House 20 -->
+<div class="modal" id="house20">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('house20')">&times;</span>
+
+    <h2>House 20</h2>
+
+<table>
+  <tr>
+    <th>Common Name</th>
+    <th>Scientific Name</th>
+    <th>No. of replicates</th>
+  </tr>
+
+  <tr>
+    <td>Paper Flower</td>
+    <td><i>Bougainvillea spp.</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Crown of Thorns</td>
+    <td><i>Euphorbia milii</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Rangoon Creeper</td>
+    <td><i>Combretum indicum</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Pokok Pisang</td>
+    <td><i>Musa spp.</i></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Prickly Pear Cactus</td>
+    <td><i>Opuntia ficus-indica</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Shrimp Plant</td>
+    <td><i>Justicia brandegeeana</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Purple Heart Plant</td>
+    <td><i>Tradescantia pallida</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Dumb Canes</td>
+    <td><i>Dieffenbachia spp.</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Philodendron Plant</td>
+    <td><i>Philodendron spp.</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Snake Plant</td>
+    <td><i>Dracaena trifasciata</i></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Green Devil's Backbone</td>
+    <td><i>Euphorbia tithymaloides</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Song of India</td>
+    <td><i>Dracaena reflexa</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Neoregelia Bromeliad</td>
+    <td><i>Neoregelia spp.</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Pokok Ubi</td>
+    <td><i>Manihot esculenta</i></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Earth Star</td>
+    <td><i>Cryptanthus spp.</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Lidah Buaya</td>
+    <td><i>Aloe vera</i></td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Pandan</td>
+    <td><i>Pandanus amaryllifolius</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Cardamom Plant</td>
+    <td><i>Elettaria cardamomum</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Pink Lady Plant</td>
+    <td><i>Hypoestes phyllostachya</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Triostar Plant</td>
+    <td><i>Stromanthe thalia</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Chinese Evergreen</td>
+    <td><i>Aglaonema spp.</i></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Serai Acheh</td>
+    <td><i>Cymbopogon nardus</i></td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Giant Sword Fern</td>
+    <td><i>Nephrolepis biserrata</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Fishtail Fern</td>
+    <td><i>Nephrolepis falcata</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Boston Fern</td>
+    <td><i>Nephrolepis exaltata</i></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Spider Plant</td>
+    <td><i>Chlorophytum comosum</i></td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Queen's Wreath</td>
+    <td><i>Petrea volubilis</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Homalomena</td>
+    <td><i>Homalomena rubescens</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Kaffir Lime</td>
+    <td><i>Citrus hystrix</i></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Black Mondo Grass</td>
+    <td><i>Ophiopogon planiscapus ‘Nigrescens’</i></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Mango Tree</td>
+    <td><i>Mangifera indica</i></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Turmeric</td>
+    <td><i>Curcuma longa</i></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Ficus Nitida Gold Bonsai</td>
+    <td><i>Ficus microcarpa</i></td>
+    <td>2</td>
+  </tr>
+</table>
+  </div>
+</div>
+
+
+<!-- Fieldwork Video -->
+<div class="modal" id="video">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('video')">&times;</span>
+	
+<h2>My YouTube Video</h2>
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/VIDEO_ID"
+title="YouTube video player"
+frameborder="0"allowfullscreen>
+</iframe>
+
 <!-- ===================== SCRIPT ===================== -->
 <script>
 function openModal(id) {
@@ -1389,6 +3075,13 @@ window.addEventListener("click", function (event) {
     event.target.style.display = "none";
   }
 });
+
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+
 
 </script>
 
