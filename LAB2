@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SIE3006 ECONOMIC BOTANY</title>
+
+<style>
+/* ===================== GLOBAL ===================== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #0f0f0f;
+  color: white;
+}
+
+/* ===================== HERO ===================== */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+    url("https://static.wixstatic.com/media/2c59e1_f64daefa8b21412289e3016a544582cd~mv2.jpg/v1/fill/w_640,h_248,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/2c59e1_f64daefa8b21412289e3016a544582cd~mv2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 64px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 22px;
+  opacity: 0.9;
+}
+
+.hero a {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 34px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 40px;
+  font-size: 18px;
+}
+
+/* ===================== SECTION ===================== */
+.section {
+  padding: 80px 10%;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 50px;
+}
+
+/* ===================== CARD GRID ===================== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* ===================== ABOUT US GRID ONLY ===================== */
+#about_us .card-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  background: #1a1a1a;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 18px;
+  text-align: center;
+}
+
+/* ===================== MODAL ===================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+}
+
+.modal-content {
+  background: #111;
+  width: 80%;
+  max-width: 550px;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content ul {
+  line-height: 1.7;
+}
+
+.close {
+  font-size: 30px;
+  float: right;
+  cursor: pointer;
+}
+
+/* ===================== GO TO TOP BUTTON ===================== */
+#goTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  background: #ffffff;
+  color: #000;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+#goTopBtn:hover {
+  background: #dddddd;
+}
+</style>
+</head>
+
+<body>
+<button id="goTopBtn" onclick="goToTop()">↑</button>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div>
+    <h1>SIE3006<br>ECONOMIC BOTANY</h1>
+    <p>Laboratory & Field Documentation</p>
+	<a href="#about_us">About us</a>
+    <a href="#lab1">Lab Session 1</a>
+	<a href="#lab2">Lab Session 2</a>
+  </div>
+</section>
+
+<!-- ===================== ABOUT US ===================== -->
+<section id="about_us" class="section">
+  <h2>About Us</h2>
+ 
+  <div class="card-grid">
+    <!-- CARD 1 -->
+    <div class="card" onclick="openModal('about 1')">
+      <img src="Aqlan.jpeg">
+      <h3>Muhamad Aqlan Zhafran Bin </h3>
+    </div>
+  
+    <!-- CARD 2 -->
+    <div class="card" onclick="openModal('about 2')">
+      <img src="Khaula_'Adawiyah.jpg">
+      <h3>Khaula 'Adawiyah Binti Amran</h3>
+    </div>
+	
+	<!-- CARD 3 -->
+    <div class="card" onclick="openModal('about 3')">
+      <img src="mira.jpg">
+      <h3>Nurul Amirah Binti Ghazali</h3>
+    </div>
+
+	<!-- CARD 4 -->
+    <div class="card" onclick="openModal('about 4')">
+      <img src="YEE SHUEN.jpg">
+      <h3>Wong Yee Shuen</h3>
+    </div>
+  
+  	<!-- CARD 5 -->
+    <div class="card" onclick="openModal('about 5')">
+      <img src="charlene lailanie.jpeg">
+      <h3>Charlene Lailanie Charles</h3>
+    </div>
+  
+  	<!-- CARD 6 -->
+    <div class="card" onclick="openModal('about 6')">
+      <img src="NAJIHAH.jpg">
+      <h3>Sharifah Najihah Nazaruddin</h3>
+    </div>
+	
+   </div>
+</section>
+
+<!-- ===================== About 1 ===================== -->
+<div class="modal" id="about 1">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('about 1')">&times;</span>
+
+    <img src="Aqlan.jpeg">
+
+    <h2>Muhamad Aqlan Zhafran Bin</h2>
+
+    <ul>
+      <li><b>Matric Number: </b> 22006502</li>
+      <li><b>Contribution:</b></li>
+      <ol>
+        <li>She baru balik Umrah</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== About 2 ===================== -->
+<div class="modal" id="about 2">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('about 2')">&times;</span>
+
+    <img src="Khaula_'Adawiyah.jpg">
+
+    <h2>Khaula 'Adawiyah</h2>
+
+    <ul>
+      <li><b>Matric Number: </b> 22006502</li>
+      <li><b>Contribution:</b></li>
+      <ol>
+        <li>She cantik and baik</li>
+        <li>She rajin and rajin</li>
+		<li>She organized person</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== About 3 ===================== -->
+<div class="modal" id="about 3">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('about 3')">&times;</span>
+
+    <img src="mira.jpg">
+
+    <h2>Nurul Amirah</h2>
+
+    <ul>
+      <li><b>Matric Number:</b> 22003489</li>
+      <li><b>Contribution:</b></li>
+      <ol>
+        <li>She's cute !</li>
+        <li>heheheheh</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== About 4 ===================== -->
+<div class="modal" id="about 4">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('about 4')">&times;</span>
+
+    <img src="YEE SHUEN.jpg">
+
+    <h2>Wong Yee Shuen</h2>
+
+    <ul>
+      <li><b>Matric Number:</b> </li>
+      <li><b>Contribution:</b></li>
+      <ol>
+        <li>She's cool!</li>
+        <li>huaahahaha</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== About 5 ===================== -->
+<div class="modal" id="about 5">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('about 5')">&times;</span>
+
+    <img src="charlene lailanie.jpeg">
+
+    <h2>Charlene Lailanie Charles</h2>
+
+    <ul>
+      <li><b>Matric Number:</b> 22003546</li>
+      <li><b>Contribution:</b></li>
+      <ol>
+        <li>She loveeeessss cats !</li>
+		<li>Rasa cam nk lempang</li>
+        <li>meowwwww</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ===================== About 6 ===================== -->
+<div class="modal" id="about 6">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('about 6')">&times;</span>
+
+    <img src="Najihah.jpg">
+
+    <h2>Sharifah Najihah Nazaruddin</h2>
+
+    <ul>
+      <li><b>Matric Number:</b> 2200</li>
+      <li><b>Contribution:</b></li>
+      <ol>
+        <li>She's mcm omputih !</li>
+        <li>heheheheh</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ===================== LAB SESSION 1 ===================== -->
+<section id="lab1" class="section">
+  <h2>Lab Session 1 – Economic Products</h2>
+
+  <div class="card-grid">
+
+    <!-- CARD 1 -->
+    <div class="card" onclick="openModal('m1')">
+      <img src="Brown_Button_Mushroom.jpg">
+      <h3>Brown Button Mushroom</h3>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card" onclick="openModal('m2')">
+      <img src="Enoki_Mushroom.jpg">
+      <h3>Enoki Mushroom</h3>
+    </div>
+	
+	<!-- CARD 3 -->
+	<div class="card" onclick="openModal('m3')">
+	  <img src="Homegrown_Seaweed.jpg">
+      <h3>Homegrown Seaweed</h3>
+    </div>
+	
+	<!-- CARD 4 -->
+	<div class="card" onclick="openModal('m4')">
+	  <img src="Tohira Hokkaido Cut Kombu Dried Kelp.png">
+      <h3>Tohira Hokkaido Cut Kombu Dried Kelp</h3>
+    </div>
+	
+	<!-- CARD 5 -->
+	<div class="card" onclick="openModal('m5')">
+	  <img src="Crispy Seaweed with Almond Slices Original.png">
+      <h3>Crispy Seaweed with Almond Slices Original</h3>
+    </div>
+	
+	<!-- CARD 6 -->
+	<div class="card" onclick="openModal('m6')">
+	  <img src="Crispy Tempura Seaweed Snack Wasabi Flavour (Noi Brand).png">
+      <h3>Crispy Tempura Seaweed Snack Wasabi Flavour (Noi Brand)</h3>
+    </div>
+	
+	<!-- CARD 7 -->
+	<div class="card" onclick="openModal('m7')">
+	  <img src="Crispy Tempura Seaweed Snack Spicy Flavour (Noi Brand).png">
+      <h3>Crispy Tempura Seaweed Snack Spicy Flavour (Noi Brand)</h3>
+    </div>
+	
+	<!-- CARD 8 -->
+	<div class="card" onclick="openModal('m8')">
+	  <img src="Fresh Black Fungus.png">
+      <h3>Fresh Black Fungus</h3>
+    </div>
+	
+	<!-- CARD 9 -->
+	<div class="card" onclick="openModal('m9')">
+	  <img src="King Oyster Mushroom.png">
+      <h3>King Oyster Mushroom</h3>
+    </div>
+	
+	<!-- CARD 10 -->
+	<div class="card" onclick="openModal('m10')">
+	  <img src="Naturally Healthy Portobello Mushroom.png">
+      <h3>Naturally Healthy Portobello Mushroom</h3>
+    </div>
+	
+	<!-- CARD 11 -->
+	<div class="card" onclick="openModal('m11')">
+	  <img src="Oguraya Tegaru Wakam.png">
+      <h3>Oguraya Tegaru Wakam</h3>
+    </div>
+	
+	<!-- CARD 12 -->
+	<div class="card" onclick="openModal('m12')">
+	  <img src="OTHER MUSHROOM.jpg">
+      <h3>Other Mushroom</h3>
+    </div>
+	
+  </div>
+</section>
+
+<!-- ===================== MODAL 1 ===================== -->
+<div class="modal" id="m1">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m1')">&times;</span>
+
+    <img src="Brown_Button_Mushroom.jpg">
+
+    <h2>Tuscan Fields Brown Button Mushroom</h2>
+
+    <ul>
+      <li><b>Ingredients:</b> Brown Button Mushroom</li>
+      <li><b>Producer:</b> Champ Fungi Sdn. Bhd.</li>
+      <li><b>Purpose / Benefits:</b></li>
+      <ol>
+        <li>Antioxidants fight cell damage</li>
+        <li>B vitamins for energy and immune function</li>
+        <li>Potassium for heart health</li>
+        <li>Vitamin D source</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== MODAL 2 ===================== -->
+<div class="modal" id="m2">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m2')">&times;</span>
+
+    <img src="Enoki_Mushroom.jpg">
+
+    <h2>First Pick Enoki Mushroom</h2>
+
+    <ul>
+      <li><b>Ingredients:</b> Enoki Mushroom</li>
+      <li><b>Producer:</b> Hor Fung Naturefresh Sdn. Bhd.</li>
+      <li><b>Purpose / Benefits:</b></li>
+      <ol>
+        <li>Highly nutritious & low calorie</li>
+        <li>Supports immune system</li>
+        <li>Rich in antioxidants</li>
+        <li>Improves gut health</li>
+        <li>Promotes heart health</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== MODAL 3 ===================== -->
+<div class="modal" id="m3">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m3')">&times;</span>
+
+    <img src="Homegrown_Seaweed.jpg">
+
+    <h2>Homegrown Seaweed</h2>
+
+    <ul>
+      <li><b>Ingredients:</b> Natural homegrown seaweed</li>
+      <li><b>Producer:</b> Emphasis Licious Enterprise</li>
+      <li><b>Purpose / Benefits:</b></li>
+      <ol>
+        <li>Cholesterol free</li>
+        <li>Low sodium, low fat</li>
+        <li>Fibre - metabolism & gut</li>
+        <li>Protein - build & repair tissue</li>
+        <li>Iodine - thyroid</li>
+		<li>Zinc - boosts immune system</li>
+		<li>Iron - blood food</li>
+		<li>Potassium - energy booster</li>
+		<li>Vitamin B9 - folic Acid</li>
+		<li>Vitamin B12 - nerves & brain</li>
+		<li>Vitamin K - nutrients binder</li>
+		<li>Vitamin A - skin & eyes</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== MODAL 4 ===================== -->
+<div class="modal" id="m4">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m4')">&times;</span>
+
+    <img src="Tohira Hokkaido Cut Kombu Dried Kelp.png">
+
+    <h2>Tohira Hokkaido Cut Kombu Dried Kelp</h2>
+
+    <ul>
+      <li><b>Ingredients:</b>  kelp (hokkaido)</li>
+      <li><b>Producer:</b> Tohira Konbu Kaiso., Ltd</li>
+      <li><b>Purpose / Benefits:</b></li>
+      <ol>
+        <li>Thyroid support</li>
+        <li>Promote heart healt</li>
+        <li>Aid in digestion and help ease constipation</li>
+        <li>Rich in antioxidant</li>
+        <li>Regulate blood sugar</li>
+		<li>Support immune system</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== MODAL 5 ===================== -->
+<div class="modal" id="m5">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m5')">&times;</span>
+
+    <img src="Crispy Seaweed with Almond Slices Original.png">
+
+    <h2>Crispy Seaweed with Almond Slices Original</h2>
+
+    <ul>
+      <li><b>Ingredients:</b> seaweed 60%, white sesame seeds 16%, almond slices 15%, maltose 4.5%, soy sauce (contains soybean, wheat, salt and sugar) 4%, iodised salt 0.5%, packaging gas [Nitrogen (INS 941)]</li>
+      <li><b>Producer:</b> TG SHIAN WANG FOOD (THAILAND) CO., LTD</li>
+      <li><b>Purpose / Benefits:</b></li>
+      <ol>
+        <li>Highly nutritious (rich in essential minerals and vitamins)</li>
+        <li>Low calories</li>
+        <li>Vegan</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ===================== MODAL 6 ===================== -->
+<div class="modal" id="m6">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m6')">&times;</span>
+
+    <img src="Crispy Tempura Seaweed Snack Wasabi Flavour (Noi Brand).png">
+
+    <h2>Crispy Tempura Seaweed Snack Wasabi Flavour (Noi Brand)</h2>
+
+    <ul>
+      <li><b>Ingredients:</b> wheat flour 31%, seaweed 25.4%, rice flour 11.5%, wasabi seasoning (contains sugar, salt, garlic, pepper, onion, flavour enhancer (Sodium Ribonucleotides (INS 635))] 4.5%, Egg White Powder, Sunflower Seeds, Flax Seeds, Chia Seeds, Packaging Gas (INS 941)</li>
+      <li><b>Producer:</b> TG SHIAN WANG FOOD (THAILAND CO., LTD</li>
+      <li><b>Purpose / Benefits:</b></li>
+      <ol>
+        <li>Nutrient-dense</li>
+        <li>Antioxidants</li>
+        <li>Omega-3s</li>
+        <li>Iodine essential for thyroid gland</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== MODAL 7 ===================== -->
+<div class="modal" id="m7">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m7')">&times;</span>
+
+    <img src="Crispy Tempura Seaweed Snack Spicy Flavour (Noi Brand).png">
+
+    <h2>Crispy Tempura Seaweed Snack Spicy Flavour (Noi Brand)</h2>
+
+    <ul>
+      <li><b>Ingredients:</b> Wheat Flour,Seaweed,Rice Flour,Spicy Seasoning[Contains sugar,salt, chili,onion,garlic, yeast extract, flavour enchancer)</li>
+      <li><b>Producer:</b> TG SHIAN WANG FOOD (THAILAND) CO., LTD
+</li>
+      <li><b>Purpose / Benefits:</b></li>
+      <ol>
+        <li>Seaweed base is rich in nutrients</li>
+        <li>Spicy flavour enhance taste experience</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== MODAL 8 ===================== -->
+<div class="modal" id="m8">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m8')">&times;</span>
+
+    <img src="Fresh Black Fungus.png">
+
+    <h2>Fresh Black Fungus</h2>
+
+    <ul>
+      <li><b>Ingredients:</b> Fresh Black Fungus</li>
+      <li><b>Producer:</b> Mx Fruit & Vegetable (M) Sdn.Bhd.</li>
+      <li><b>Purpose / Benefits:</b></li>
+      <ol>
+        <li>High in fiber promotes health digestion</li>
+        <li>Its polysaccharides acts as prebiotics and support gut bacteria</li>
+        <li>Lower blood cholesterol level, Antithrombotic properties, Reduces heart disease</li>
+        <li>Rich in iron and prevent anemia</li>
+        <li>Antioxidant and anti-inflammatory</li>
+		<li>Rich in vitamins and minerals</li>
+		<li>Supports immune function</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== MODAL 9 ===================== -->
+<div class="modal" id="m9">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m9')">&times;</span>
+
+    <img src="King Oyster Mushroom.png">
+
+    <h2>King Oyster Mushroom</h2>
+
+    <ul>
+      <li><b>Ingredients:</b> King Oyster Mushroom</li>
+      <li><b>Producer:</b> Shenzhen Maoxiong Co., LTD</li>
+      <li><b>Purpose / Benefits:</b></li>
+      <ol>
+        <li>Rich in nutrients</li>
+        <li>Low in calories and fat</li>
+        <li>Antioxidant properties</li>
+        <li>Good for heart health</li>
+        <li>Immune support</li>
+		<li>Good for metabolic health</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== MODAL 10 ===================== -->
+<div class="modal" id="m10">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m10')">&times;</span>
+
+    <img src="Naturally Healthy Portobello Mushroom.png">
+
+    <h2>Naturally Healthy Portobello Mushroom</h2>
+
+    <ul>
+      <li><b>Ingredients:</b> Portobello mushroom</li>
+      <li><b>Producer:</b> Fungiculture Asia Sdn Bhd</li>
+      <li><b>Purpose / Benefits:</b></li>
+      <ol>
+        <li>Low-calorie</li>
+        <li>High nutrient profile</li>
+        <li>Antioxidant properties</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== MODAL 11 ===================== -->
+<div class="modal" id="m11">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('m11')">&times;</span>
+
+    <img src="Oguraya Tegaru Wakam.png">
+
+    <h2>Oguraya Tegaru Wakam</h2>
+
+    <ul>
+      <li><b>Ingredients:</b> Cut wakame seaweed</li>
+      <li><b>Producer:</b> ????????</li>
+      <li><b>Purpose / Benefits:</b></li>
+      <ol>
+        <li>Healthy heart</li>
+        <li>Lowers cholesterol</li>
+        <li>Skin care</li>
+        <li>Lowers cancer risk</li>
+        <li>Reduces inflammation</li>
+		<li>Increases energy levels</li>
+		<li>Improves brain function</li>
+      </ol>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ===================== SCRIPT ===================== -->
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+window.onscroll = function () {
+  const btn = document.getElementById("goTopBtn");
+  if (document.documentElement.scrollTop > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+function goToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+</script>
+
+</body>
+</html>
